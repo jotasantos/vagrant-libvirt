@@ -95,7 +95,7 @@ cd "$TMP_DIR"
 #value on the first level of JSON (since QEMU v8 there are multiple
 #"virtual-size"s in disk info).
 #IMG_SIZE=$(qemu-img info --output=json "$TMP_IMG" | awk '/^\s{0,4}"virtual-size/{s=int($2)/(1024^3); print (s == int(s)) ? s : int(s)+1 }')
-IMG_SIZE=4
+IMG_SIZE=9
 
 echo "{$IMG_SIZE}"
 
